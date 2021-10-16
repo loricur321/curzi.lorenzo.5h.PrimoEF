@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace curzi.lorenzo._5h.PrimoEF.Models
 {
@@ -14,5 +15,10 @@ namespace curzi.lorenzo._5h.PrimoEF.Models
 
         [EmailAddress]
         public string Email { get; set; }
+
+        public override string ToString()
+        {
+            return $"{idPersona}\t{Nome}  {Cognome}  {Email}";
+        }
     }
 }
